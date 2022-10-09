@@ -1,16 +1,16 @@
+#include "blockn.h"
+
 #define CMDLENGTH 45
 #define DELIMITER "  "
 #define CLICKABLE_BLOCKS
 
 const Block blocks[] = {
-	BLOCK("sb-mail",    1800, 17),
-	BLOCK("sb-music",   0,    18),
-	BLOCK("sb-disk",    1800, 19),
-	BLOCK("sb-memory",  10,   20),
-	BLOCK("sb-loadavg", 5,    21),
-	BLOCK("sb-mic",     0,    26),
-	BLOCK("sb-record",  0,    27),
-	BLOCK("sb-volume",  0,    22),
-	BLOCK("sb-battery", 5,    23),
-	BLOCK("sb-date",    1,    24)
+	// For Powerline users must uses block number start with >17
+	BLOCK("sb-tasks",    10,    BLOCKN_TASK),
+	BLOCK("sb-packages", 1800,  BLOCKN_PACKAGE),
+	BLOCK("sb-news",     0,     BLOCKN_NEWS),
+	BLOCK("sb-volume",   0,     BLOCKN_VOLUME),
+	BLOCK("sb-battery",  5,     BLOCKN_BATTERY),
+	BLOCK("sb-clock",    1,     BLOCKN_CLOCK),
+	BLOCK("cat /tmp/recordingicon",    0,     BLOCKN_RECORD),
 };
